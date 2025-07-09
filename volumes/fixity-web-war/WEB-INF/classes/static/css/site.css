@@ -1,0 +1,30 @@
+.navbar-brand img {
+  width: auto;
+  height: 40px;
+}
+
+img.screenshot {
+  width: 100%;
+  height: auto;
+}
+
+img.logo {
+  max-width: 150px;
+  height: auto;
+}
+
+img.footer-logo {
+  max-width: 50px;
+  height: auto;
+}
+
+section.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 0.3rem;
+}
+
+div.row {
+  margin-bottom: 1.5rem;
+}

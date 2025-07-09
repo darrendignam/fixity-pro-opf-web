@@ -1,0 +1,228 @@
+html {
+  height: 100%;
+  background-color: #333233;
+}
+
+body {
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  height: 100%;
+}
+
+.page-wrapper {
+  height: 100%;
+}
+
+.page-wrapper .column {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+h6 {
+  font-size: 13px;
+}
+
+/* ========= BACKGROUND ========= */
+.bg-blue {
+  background: #333233;
+}
+
+.bg-red {
+  background: #333233;
+}
+
+.bg-gra-01 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#333233), to(#333233));
+  background: -webkit-linear-gradient(bottom, #333233 0%, #333233 100%);
+  background: -moz-linear-gradient(bottom, #333233 0%, #333233 100%);
+  background: -o-linear-gradient(bottom, #333233 0%, #333233 100%);
+  background: linear-gradient(to top, #333233 0%, #333233 100%);
+}
+
+.bg-gra-02 {
+  background: -webkit-gradient(linear, left bottom, right top, from(#333233), to(#333233));
+  background: -webkit-linear-gradient(bottom left, #333233 0%, #333233 100%);
+  background: -moz-linear-gradient(bottom left, #333233 0%, #333233 100%);
+  background: -o-linear-gradient(bottom left, #333233 0%, #333233 100%);
+  background: linear-gradient(to top right, #333233 0%, #333233 100%);
+}
+
+.bg-light {
+  background-color: #333233!important;
+}
+
+/* ========= NAVBAR ========= */
+.navbar {
+  z-index: 99999;
+}
+
+.fixity-logo{
+	font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 20px !important;
+  color: white !important;
+  line-height: 40px;
+}
+
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-item{
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif !important;
+  font-weight: 200 !important;
+  font-size: 16px !important;
+  color: white !important;
+  line-height: 40px;
+  padding: 0 15px 0px 15px;
+  margin: 0;
+}
+
+.border-right{
+  border-right: 1px solid #545454;
+}
+
+.nav-active{
+  color:#e4701d !important;
+}
+
+/* ========= HOME.HTML ========= */
+#loading-gif {
+  position: relative;
+  text-align: center;
+  width: 25px;
+  margin: 0 auto;
+}
+
+#loading-gif img {
+  width: 60px; 
+  height: 60px;
+  z-index: 99999;
+  position: absolute;
+}
+
+#fixity-pro-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 65px;
+}
+
+/* ========= SPACING ========= */
+.p-t-100 {
+  padding-top: 100px;
+}
+
+.p-t-130 {
+  padding-top: 130px;
+}
+
+.p-t-180 {
+  padding-top: 180px;
+}
+
+.p-t-20 {
+  padding-top: 20px;
+}
+
+.p-t-15 {
+  padding-top: 15px;
+}
+
+.p-t-10 {
+  padding-top: 10px;
+}
+
+.p-t-30 {
+  padding-top: 30px;
+}
+
+.p-b-100 {
+  padding-bottom: 100px;
+}
+
+.m-r-45 {
+  margin-right: 45px;
+}
+
+/* ========= WRAPPER ========= */
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper--w960 {
+  max-width: 960px;
+}
+
+.wrapper--w780 {
+  max-width: 780px;
+}
+
+.wrapper--w680 {
+  max-width: 680px;
+}
+
+.title {
+  color: #525252;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+/* ========= CARD ========= */
+.card {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.card-4 {
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-4 .card-body {
+  padding: 57px 65px;
+  padding-bottom: 65px;
+}
+
+@media (max-width: 767px) {
+  .card-4 .card-body {
+    padding: 50px 40px;
+  }
+}

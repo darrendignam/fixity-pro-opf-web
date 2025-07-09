@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+		<link th:href="@{/css/main.css}" rel="stylesheet" />
+		<link rel="icon" th:href="@{/img/favicon.ico}" type="image/x-icon" />
+		<title>Fixity Pro</title>
+	</head>
+
+	<body class="bg-gra-02 d-flex align-items-stretch flex-column">
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand fixity-logo" href="/">
+				<img th:src="@{/img/fixity_ico.png}" class="d-inline-block align-top" alt="">
+				Fixity Pro by AVP
+			</a>
+			<div th:with="route=${#httpServletRequest.requestURI}" >
+				<a class="navbar-brand nav-item border-right" th:classappend="${route} == '/' ? nav-active : ''" href="/">
+					Home
+				</a>
+				<a class="navbar-brand nav-item border-right" th:classappend="${route} ==  '/register' ? nav-active : ''" href="/register">
+					Register
+				</a>
+				<a class="navbar-brand nav-item " th:classappend="${route} == '/requestReinstall' ? nav-active : ''" href="/requestReinstall">
+					Request Reinstall
+				</a>
+			</div>
+		</nav>
+
+		<div class="page-wrapper bg-gra-02 d-flex align-items-center font-poppins row mx-auto">	
+			<div class="column">
+				<div class="card card-4">
+					<div class="card-body">
+						<h2 class="title">Reset Fixity Pro Access Key</h2>
+						
+						<p class="lead">It should no longer be necessary to reset the access key.</p>
+
+						<form id="formReinstall">
+							<div class="form-row">
+								<div class="col-md-12 mb-3">
+									<label for="accessKey">Access Key*</label>
+									<input class="form-control" id="accessKey" placeholder="Access Key" required disabled>
+									<div class="valid-feedback">Looks good!</div>
+									<div class="invalid-feedback">Please enter a valid Key.</div>
+								</div>
+							</div>	
+							
+							<div class="row">
+								<div class="col text-center">
+									<button id="btnReinstall"  class="btn btn-primary"  disabled>Reset Access Key</button>
+								</div>
+							</div>	
+								
+						</form>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<script type="text/javascript" th:src="@{/jquery/jquery-3.5.1.min.js}"></script>
+		<script type="text/javascript" th:src="@{/jquery/jquery.validate.min.js}"></script>
+		
+		<script type="text/javascript"th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+		<script th:src="@{/sweetalert2/sweetalert2.all.min.js}"></script>
+			
+		<script type="text/javascript" th:src="@{/templates/reinstall/reinstall.js}"></script>
+		<script type="text/javascript" th:src="@{/templates/loading.js}"></script>
+		<script type="text/javascript">
+			localStorage.setItem("url", "reinstall");
+			
+			document.addEventListener("DOMContentLoaded", function (event) {
+				if (window.parent == "https://fixitypro.com/") {
+					jQuery(".navbar").remove();
+				}
+			});
+		</script>
+		<script type='text/javascript'>
+			function isItIE() {
+				user_agent = navigator.userAgent;
+				var is_it_ie = user_agent.indexOf("MSIE ") > -1 || user_agent.indexOf("Trident/") > -1;
+				return is_it_ie; 
+			}
+			if (isItIE()){
+				alert("Registration is not supported on Internet Explore.\nPlease switch to a modern browser like Firefox, Chrome, Safari, or Edge.");
+			}
+		</script>
+
+		<!-- Start of HubSpot Embed Code -->
+		<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4232080.js"></script>
+		<!-- End of HubSpot Embed Code -->
+	</body>
+</html>

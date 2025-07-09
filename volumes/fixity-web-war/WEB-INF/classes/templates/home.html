@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+		<link th:href="@{/css/site.css}" rel="stylesheet" />
+		<link rel="icon" th:href="@{/img/favicon.ico}" type="image/x-icon" />
+		<title>Fixity Pro</title>
+	</head>
+
+	<body class="d-flex align-items-stretch flex-column">
+		<header th:replace="common-navbar :: common-navbar" />
+		<main role="main">
+			<div class="container">
+				<section class="jumbotron">
+					<div class="row">
+						<div class="col-md-2 text-left">
+							<img th:src="@{/img/fixity_ico.png}" class="logo" alt="Fixity Pro logo" />
+						</div>
+						<div class="col-md-10 text-left">
+							<h2>Data Integrity. Done. Simply.</h2>
+							<p class="lead">
+								You have digital files on your computer that you care about. A lot.
+								You worry about how you would ever know if anything ever happened to them and you hope that nothing ever does.
+								Fixity Pro turns worry into certainty and hope into the information you need.
+							</p>
+						</div>
+					</div>
+				</section>
+				<div class="row">
+					<div class="col-md-2">
+						<img th:src="@{/img/opf-logo.png}" class="d-inline-block align-top logo" alt="Fixity Pro logo" />
+					</div>
+					<div class="col-md-10">
+						<h2>Fixity Pro maintained by Open Preservation Foundation.</h2>
+						<p class="lead">Open software and standards are key to long-term digital access. The OPF provides expertise and support, empowering the digital preservation community to develop sustainable resources.</p>
+						<p>
+							AVP and the Open Preservation Foundation (OPF) are excited to announce that AVP has transferred ownership and intellectual property rights of Fixity Pro to OPF. This transfer represents our mutual commitment to ensuring the long-term sustainability and continued development of this essential digital preservation tool.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h2>How will the transfer to OPF affect users?</h2>
+						<ul>
+							<li>Registration is no longer necessary and has been disabled.</li>
+							<li>The software is no longer subscription and is free to use for anyone</li>
+							<li>It is no longer necessary to obtain a trial or subscription license key</li>
+							<li>We are continuing to run the subscription validation service as the current software needs this to continue to function</li>
+						</ul>
+						<h3>Find Out More</h3>
+						<a href="/subscribers" class="btn btn-primary btn-lg pad">Existing Subscribers</a>
+						<a href="/getting-started" class="btn btn-primary btn-lg pad">New Users</a>				
+					</div>
+				</div>
+  			<div class="row">
+					<div class="col-md-6">
+						<img th:src="@{/img/Fixity_Pro_1.0.1.png}" class="screenshot" alt="Fixity Pro screenshot"/>
+					</div>
+					<div class="col-md-6">
+		    		<h2>Practice Data Integrity Like a Pro</h2>
+						<p>
+							<ul>
+								<li><i class="icon-default-style icon-chevron-right accent-color"></i> Know if files have been changed, added, removed, moved, or renamed</li>
+								<li><i class="icon-default-style icon-chevron-right accent-color"></i> Scan files that are stored on your computer, removable storage devices, and mounted network storage locations.</li>
+								<li><i class="icon-default-style icon-chevron-right accent-color"></i> Have reports emailed to your inbox and never miss an important update</li>
+								<li><i class="icon-default-style icon-chevron-right accent-color"></i> Schedule routine automatic scans to take place whenever you want</li>
+								<li><i class="icon-default-style icon-chevron-right accent-color"></i> Filter out files that you want to exclude</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+  	  </div>
+		</main>
+		<footer th:replace="common-footer :: common-footer" />
+	</body>
+</html>

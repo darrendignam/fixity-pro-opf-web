@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+		<link th:href="@{/css/main.css}" rel="stylesheet" />
+		<link rel="icon" th:href="@{/img/favicon.ico}" type="image/x-icon" />
+
+		<title>Fixity Pro</title>
+	</head>
+
+	<body class="bg-gra-02 d-flex align-items-stretch flex-column">
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand fixity-logo" href="/">
+				<img th:src="@{/img/fixity_ico.png}" class="d-inline-block align-top" alt="">
+				Fixity Pro by AVP
+			</a>
+            <div th:with="route=${#httpServletRequest.requestURI}" > 
+				<a class="navbar-brand nav-item border-right" th:classappend="${route} == '/' ? nav-active : ''" href="/">
+					Home
+				</a>
+				<a class="navbar-brand nav-item border-right" th:classappend="${route} ==  '/register' ? nav-active : ''" href="/register">
+					Register
+				</a>
+				<a class="navbar-brand nav-item " th:classappend="${route} == '/requestReinstall' ? nav-active : ''" href="/requestReinstall">
+					Request Reinstall
+				</a>
+			</div>
+		</nav>
+
+		<div class="page-wrapper bg-gra-02 d-flex align-items-center font-poppins row mx-auto">
+			<div class="column">
+				<div class="card card-4">
+					<div class="card-body">
+						<h2 class="title">Fixity Pro Registration</h2>
+						
+						<div id="divSuccess" class="alert alert-success" role="alert">
+							<h4 class="alert-heading">Email Confirmed</h4>
+							<p>Thank you, your email has been confirmed. A new email has been sent to you with an access key.</p>
+							<p>Please click the button below to download Fixity Pro for the operating system you specified when registering.</p>
+							<hr>
+							<p class="mb-0">
+								<a id="btnWindows" href="https://fixity-releases.s3.amazonaws.com/latest-release/windows/fixity.exe" class="btn btn-primary stretched-link">Windows</a> 
+								<a id="btnIos" href="https://fixity-releases.s3.amazonaws.com/latest-release/mac/fixity.pkg" class="btn btn-primary stretched-link">macOS</a>
+							</p>
+						</div>
+							
+						<div id="divError" class="alert alert-danger" role="alert">
+							<h4 class="alert-heading">Error</h4>
+							<p id="txtError">There was a problem validating your email.</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+
+		<script type="text/javascript" th:src="@{/jquery/jquery-3.5.1.min.js}"></script>
+		<script type="text/javascript" th:src="@{/jquery/jquery.validate.min.js}"></script>
+		
+		<script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.bundle.min.js}"></script>
+		<script th:src="@{/sweetalert2/sweetalert2.all.min.js}"></script>
+			
+		<script type="text/javascript" th:src="@{/templates/activation/activation.js}"></script>
+		<script type="text/javascript" th:src="@{/templates/loading.js}"></script>
+	</body>
+</html>

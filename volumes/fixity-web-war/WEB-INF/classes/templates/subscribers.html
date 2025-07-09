@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+		<link th:href="@{/css/site.css}" rel="stylesheet" />
+		<link rel="icon" th:href="@{/img/favicon.ico}" type="image/x-icon" />
+		<title>Fixity Pro</title>
+	</head>
+
+	<body class="d-flex align-items-stretch flex-column">
+		<header th:replace="common-navbar :: common-navbar" />
+		<main role="main">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>What Next for Existing Subscribers.</h2>
+						<p class="lead">
+							Existing subscribers no longer need to pay and should not renew their subscription. The software will continue to work as it has done previously.
+						</p>
+						<ul>
+							<li>It is no longer necessary to subscribe/pay to use Fixity Pro.</li>
+							<li>Existing subscriptions should continue to operate without any action of the subscriber's part.</li>
+							<li>The software will still try to validate a subscription on startup, this check should never fail.</li>
+							<li>OPF will produce a new version of the software with all subscription features disabled.</li>
+						</ul>
+					</div>
+				</div>
+  	  </div>
+		</main>
+		<footer th:replace="common-footer :: common-footer" />
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+		<link th:href="@{/css/site.css}" rel="stylesheet" />
+		<link rel="icon" th:href="@{/img/favicon.ico}" type="image/x-icon" />
+		<title>Fixity Pro</title>
+	</head>
+
+	<body class="d-flex align-items-stretch flex-column">
+		<header th:replace="common-navbar :: common-navbar" />
+		<main role="main">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Getting Started with Fixity Pro.</h2>
+						<p class="lead">
+							Fixity Pro is a tool for checking the integrity of your digital files. It generates checksums and monitors files for changes, ensuring that your data remains intact over time.
+						</p>
+						<p>
+							To get started with Fixity Pro, follow these steps:
+						</p>
+						<ol>
+							<li>
+								<p><a href="\download">Download Fixity Pro</a> for Windows or Mac.</p>
+							</li>
+							<li>
+								<p>Run the application and fill in the registration form with dummy details, similar to the screenshot below.</p>
+								<img th:src="@{/img/registration-form.png}" class="img-fluid" />
+								<p>You do NOT need to put any personal details into the form, dummy details similar to below will work.</p>
+							</li>
+							<li>
+								<p>Once registered, you can start adding files and folders to monitor.</p>
+							</li>
+						</ol>
+						<a class="btn btn-primary btn-lg pad" th:href="@{/manual/fixity-pro-manual.pdf}" download>Fixity Pro manual</a>
+					</div>
+				</div>
+  	  </div>
+		</main>
+		<footer th:replace="common-footer :: common-footer" />
+	</body>
+</html>

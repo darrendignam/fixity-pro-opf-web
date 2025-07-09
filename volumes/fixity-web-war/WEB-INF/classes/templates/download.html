@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+		<link th:href="@{/css/site.css}" rel="stylesheet" />
+		<link rel="icon" th:href="@{/img/favicon.ico}" type="image/x-icon" />
+		<title>Fixity Pro</title>
+	</head>
+
+	<body class="d-flex align-items-stretch flex-column">
+		<header th:replace="common-navbar :: common-navbar" />
+		<main role="main">
+			<div class="container theme-showcase" role="main">
+				<section class="jumbotron text-center">
+					<h2>Download Fixity Pro.</h2>
+					<p class="lead">
+						Fixity Pro is free to download and use, for Windows and macOS.
+					</p>
+						<a th:href="@{/installers/windows-1.1.4.exe}" class="btn btn-primary btn-lg pad" download>Windows</a>
+						<a th:href="@{/installers/mac-1.1.4.pkg}" class="btn btn-primary btn-lg pad" download>MacOS</a>
+				</section>
+  	  </div>
+		</main>
+		<footer th:replace="common-footer :: common-footer" />
+	</body>
+</html>

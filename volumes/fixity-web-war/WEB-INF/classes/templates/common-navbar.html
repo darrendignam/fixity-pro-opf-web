@@ -1,0 +1,30 @@
+		<header th:fragment="common-navbar">
+			<nav class="navbar navbar-expand-md mb-4">
+				<a class="navbar-brand" href="/">
+					<img th:src="@{/img/opf-logo.png}" class="d-inline-block align-top" alt="Open Preservation Foundation logo" />
+					Fixity Pro
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link nav-item border-right home-navlink" th:classappend="${route} == '/subscribers' ? nav-active : ''" href="/subscribers/">Subscribers</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-item border-right home-navlink" th:classappend="${route} == '/getting-started' ? nav-active : ''" href="/getting-started/">Getting Started</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-item border-right home-navlink" th:href="@{/manual/fixity-pro-manual.pdf}" download>Manual</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-item border-right home-navlink" th:classappend="${route} == '/roadmap' ? nav-active : ''" href="/roadmap/">Road Map</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-item border-right home-navlink" th:classappend="${route} == '/download' ? nav-active : ''" href="/download/">Download</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
