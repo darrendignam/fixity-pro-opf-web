@@ -1,0 +1,35 @@
+services:
+
+  fixitypro-db:
+    image: mysql:5.7
+    container_name: fixitypro-opf-db
+    environment:
+      MYSQL_DATABASE: fixitypro
+      MYSQL_USER: fixitypro
+      MYSQL_PASSWORD: fixitypro
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - ./volumes/db:/var/lib/mysql
+      - ./volumes/share:/share
+
+  fixitypro-web:
+    # image: openpreserve/fixitypro-web:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fixitypro-web
+    depends_on:
+      - fixitypro-db
+    volumes:
+      # - ./volumes/fixity-web-war:/opt/fixitypro/fixitypro-web-unpacked
+      - ./volumes/share:/share
+    ports:
+      - 18080:8080
+      - 10080:80
+    # environment:
+    #   - VIRTUAL_HOST=fixitypro.com,www.fixitypro.com
+    #   - DEFAULT_HOST=www.fixitypro.com
+    #   - VIRTUAL_PORT=8080
+    #   - LETSENCRYPT_HOST=fixitypro.com,www.fixitypro.com
+    #   - LETSENCRYPT_EMAIL=sysadmin@openpreservation.org
+    # entrypoint: dumb-init java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Djava.awt.headless=true -jar /opt/fixitypro/fixitypro-web-unpacked
