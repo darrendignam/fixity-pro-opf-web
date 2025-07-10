@@ -29,6 +29,57 @@ div.row {
   margin-bottom: 1.5rem;
 }
 
+
+
+ .top-opf-bar {
+    position: fixed; /* Stays fixed relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust height for boldness */
+    color: white; /* White text for contrast */
+    font-weight: bold; /* Bold text */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: flex-start; /* Align content to the start (left) */
+    z-index: -1; /* Crucial: Puts it behind other content */
+    padding: 0 1rem; /* Add some padding */
+    background-position: 50% 50%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://staging.openpreservation.org/wp-content/uploads/2019/11/Homepage-bg.jpg);
+}
+.top-opf-bar .top-bar-logo {
+    margin-right: 15px; /* Space between logo and text */
+}
+
+/* Ensure the body has a solid background to cover the bar on scroll */
+body {
+    background-color: #fff; /* Light grey, or use 'white' */
+    padding-top: 100px; /* Same height as .top-blue-bar */
+}
+main{
+  background: #fff;
+}
+/* Adjust header margin to account for the new top bar if needed, or remove Bootstrap's mb-4 */
+header {
+    margin-top: 0; /* Reset default margin if any */
+    background: #fff; /* White background for the header */ 
+}
+
+
+.navbar-brand{
+  color: #000;
+}
+.navbar .navbar-nav>li>a {
+  color: #777;
+}
+.navbar {
+  border-bottom: 1px solid #777;
+}
+
+
 .navbar-toggler {
   border: none; /* Remove default border */
   padding: 0.25rem 0.75rem; /* Adjust padding for better click area */
