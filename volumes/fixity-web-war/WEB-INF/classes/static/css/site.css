@@ -74,11 +74,11 @@ header {
 }
 .navbar .navbar-nav>li>a {
   color: #777;
+  border-right: 0px solid #fff; 
 }
 .navbar {
   border-bottom: 1px solid #777;
 }
-
 
 .navbar-toggler {
   border: none; /* Remove default border */
