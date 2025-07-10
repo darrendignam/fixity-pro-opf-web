@@ -78,6 +78,7 @@ header {
 }
 .navbar {
   border-bottom: 1px solid #777;
+  background-color: #fff; /* White background for the navbar */
 }
 
 .navbar-toggler {
