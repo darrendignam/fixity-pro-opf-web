@@ -252,3 +252,7 @@ header {
             /* Add background-image, mask, etc. for your custom icons */
             vertical-align: middle; /* Align with text if needed */
         }
+
+        .footer-logo{
+          margin:20px 5px;
+        }
