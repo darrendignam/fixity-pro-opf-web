@@ -1,10 +1,4 @@
-		
-	<div th:fragment="common-navbar" class="navbar-wrapper">
-		<div class="top-opf-bar">
-           <img decoding="async" class="top-bar-logo" src="https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-136x75.png" width="136" height="75" alt="opf-site-logo-white" srcset="https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-136x74.png 136w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-300x165.png 300w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-768x423.png 768w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-1024x564.png 1024w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-134x75.png 134w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-127x69.png 127w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-126x69.png 126w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-125x69.png 125w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-124x69.png 124w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-123x69.png 123w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-112x61.png 112w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-92x52.png 92w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-107x60.png 107w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-108x60.png 108w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-109x60.png 109w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-110x60.png 110w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-111x60.png 111w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin.png 1670w" sizes="(max-width: 136px) 100vw, 136px">
-			Powered By OPF
-		</div>
-		<header>
+		<header th:fragment="common-navbar">
 			<nav class="navbar navbar-expand-md mb-4">
 				<div class="container">
 					<a class="navbar-brand" href="/">
@@ -17,23 +11,22 @@
 					<div class="collapse navbar-collapse" id="navbarCollapse">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item">
-								<a class="nav-link nav-item border-right home-navlink" th:classappend="${route} == '/subscribers' ? nav-active : ''" href="/subscribers/">Subscribers</a>
+								<a class="nav-link nav-item home-navlink" th:classappend="${route} == '/subscribers' ? nav-active : ''" href="/subscribers/">Subscribers</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link nav-item border-right home-navlink" th:classappend="${route} == '/getting-started' ? nav-active : ''" href="/getting-started/">Getting Started</a>
+								<a class="nav-link nav-item home-navlink" th:classappend="${route} == '/getting-started' ? nav-active : ''" href="/getting-started/">Getting Started</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link nav-item border-right home-navlink" th:href="@{/manual/fixity-pro-manual.pdf}" download>Manual</a>
+								<a class="nav-link nav-item home-navlink" th:href="@{/manual/fixity-pro-manual.pdf}" download>Manual</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link nav-item border-right home-navlink" th:classappend="${route} == '/roadmap' ? nav-active : ''" href="/roadmap/">Road Map</a>
+								<a class="nav-link nav-item home-navlink" th:classappend="${route} == '/roadmap' ? nav-active : ''" href="/roadmap/">Road Map</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link nav-item border-right home-navlink" th:classappend="${route} == '/download' ? nav-active : ''" href="/download/">Download</a>
+								<a class="nav-link nav-item home-navlink" th:classappend="${route} == '/download' ? nav-active : ''" href="/download/">Download</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 		</header>
-	</div>

@@ -1,10 +1,66 @@
-    <footer class="container text-center" th:fragment="common-footer">
-			<p>
+    <footer class="dark-grey-footer" th:fragment="common-footer">
+			<!-- <p>
 				<a href="https://www.openpreservation.org" target="_blank" rel="noopener noreferrer">
 					<img th:src="@{/img/opf-logo.png}" alt="Open Preservation Foundation logo" class="d-inline-block align-top footer-logo" />
 				</a>
 			</p>
-    	<p>Copyright © 2025 Open Preservation Foundation.</p>
+    	<p>Copyright © 2025 Open Preservation Foundation.</p> -->
+
+    <div class="container">
+            <div class="row text-center text-md-left align-items-end">
+                <!-- Column 1: Contact Information & About/Company Links -->
+                <div class="col-md-4 col-12 order-md-1 order-1">
+                    <div>
+                        <p>Open Preservation Foundation<br>11 Jamaica Street<br>Greenock, PA15 1XX</p>
+                        <p>+44 (0) 113 526 6467</p>
+                        <p>info@openpreservation.org</p>
+                    </div>
+                    <div class="mt-3"> <!-- Added margin-top for spacing -->
+						<ul id="menu-footer-contactus-top" class="horizontal social-links.horizontal">
+							<li><a href="https://openpreservation.org/about">About</a></li>
+							<li><a href="https://openpreservation.org/company-information/">Company Information</a></li>
+						</ul>
+                    </div>
+
+                </div>
+
+                <!-- Column 2: Copyright (Middle on desktop, bottom on mobile) -->
+                <div class="col-md-4 col-12 order-md-2 order-3 text-center">
+                    <!-- <img src="/img/opf-logo.png" alt="Open Preservation Foundation logo" class="footer-logo" /> -->
+                    <p>All content on this website is licensed under CC BY-SA 4.0 unless stated otherwise.</p>
+                </div>
+
+                <!-- Column 3: Social Links & Footer Menu -->
+                <div class="col-md-4 col-12 order-md-3 order-2 text-center text-md-right">
+					<div><img decoding="async" src="https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-136x75.png" width="136" height="75" alt="opf-site-logo-white" srcset="https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-136x74.png 136w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-300x165.png 300w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-768x423.png 768w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-1024x564.png 1024w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-134x75.png 134w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-127x69.png 127w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-126x69.png 126w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-125x69.png 125w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-124x69.png 124w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-123x69.png 123w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-112x61.png 112w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-92x52.png 92w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-107x60.png 107w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-108x60.png 108w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-109x60.png 109w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-110x60.png 110w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin-111x60.png 111w, https://openpreservation.org/wp-content/uploads/2019/11/opf-site-logo-white-margin.png 1670w" sizes="(max-width: 136px) 100vw, 136px"></div>
+
+
+					<ul class="social-links horizontal">
+						<li class="social-link-item bluesky">
+							<a href="https://bsky.app/profile/openpreservation.org" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+						</li>
+						<li class="social-link-item x">
+							<a href="https://x.com/openpreserve" target="_blank" rel="noopener" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
+						</li>
+						<li class="social-link-item github">
+							<a href="https://github.com/openpreserve" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+						</li>
+						<li class="social-link-item linkedin">
+							<a href="https://www.linkedin.com/company/openpreservation/" rel="noopener" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+						<li class="social-link-item youtube">
+							<a href="https://www.youtube.com/c/OpenpreservationOrg" rel="noopener" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+						</li>
+					</ul>
+
+                    <ul id="menu-footer-menu-top" class="horizontal social-links.horizontal">
+                        <li><a href="https://openpreservation.org/contact/" data-ps2id-api="true">Contact Us</a></li>
+                        <li><a href="https://openpreservation.org/membership/" data-ps2id-api="true">Join Us</a></li>
+                        <li><a href="https://openpreservation.org/donate/" data-ps2id-api="true">Donate</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
 		<script>
 				// Wait for the DOM to be fully loaded

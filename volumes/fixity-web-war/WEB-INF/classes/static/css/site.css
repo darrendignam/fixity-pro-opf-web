@@ -136,3 +136,119 @@ header {
 .navbar-toggler-icon.navbar-toggler-icon--open::after {
   transform: translateY(-10px) rotate(-45deg); /* Rotate */
 }
+
+   /* Styling for the logo image within the main content */
+        .col-md-2 .logo {
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Footer specific styles */
+        .dark-grey-footer {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .dark-grey-footer h5 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .dark-grey-footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dark-grey-footer ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .dark-grey-footer ul li a {
+            color: #ced4da;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .dark-grey-footer ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* Specific styles for the footer logo in the copyright column */
+        .dark-grey-footer .footer-logo {
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .dark-grey-footer .copyright-text { /* New class for copyright text */
+            font-size: 0.9rem;
+            color: #adb5bd;
+            margin-top: 1rem;
+        }
+
+        /* NEW: Horizontal social links */
+      /* Horizontal list base styles (for social links and footer menus) */
+      .social-links.horizontal,
+        #menu-footer-menu-top,
+        #menu-footer-contactus-top {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: center; /* Center on mobile */
+        }
+
+        /* Spacing for list items within horizontal lists */
+        .social-links.horizontal li,
+        #menu-footer-menu-top li,
+        #menu-footer-contactus-top li {
+            margin: 0 0.75rem 0.5rem 0.75rem; /* Horizontal spacing and bottom margin for wrapping */
+        }
+
+        /* Link styling for horizontal lists */
+        .social-links.horizontal li a,
+        #menu-footer-menu-top li a,
+        #menu-footer-contactus-top li a {
+            color: #f8f9fa; /* Changed to white for social links, consistent with previous */
+            text-decoration: underline;
+            transition: color 0.2s ease-in-out;
+            display: block; /* Ensure the whole icon is clickable */
+        }
+
+        .social-links.horizontal li a:hover,
+        #menu-footer-menu-top li a:hover,
+        #menu-footer-contactus-top li a:hover {
+            color: #d5107c; /* OPF Purple on hover for consistency with social links */
+        }
+
+        /* Specific margin adjustments for the existing horizontal lists */
+        .social-links.horizontal {
+            margin-bottom: 1rem; /* Space below social links */
+        }
+
+        #menu-footer-menu-top {
+            margin-top: 1rem; /* Space above this menu */
+        }
+
+        /* Desktop specific alignment for social links and footer menu */
+        @media (min-width: 768px) { /* md breakpoint */
+            .social-links.horizontal,
+            #menu-footer-menu-top { /* These will be right-aligned */
+                justify-content: flex-end;
+            }
+            #menu-footer-contactus-top { /* This will be left-aligned */
+                justify-content: flex-start;
+            }
+        }
+
+        /* Styles for custom icons (if not using Font Awesome directly) */
+        .icon-opf-bluesky, .icon-opf-x-twitter, .ti-youtube {
+            display: inline-block;
+            width: 24px; /* Example size */
+            height: 24px; /* Example size */
+            /* Add background-image, mask, etc. for your custom icons */
+            vertical-align: middle; /* Align with text if needed */
+        }
