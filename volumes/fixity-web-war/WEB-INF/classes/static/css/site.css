@@ -207,6 +207,12 @@ header {
         #menu-footer-contactus-top li {
             margin: 0 0.75rem 0.5rem 0.75rem; /* Horizontal spacing and bottom margin for wrapping */
         }
+        #menu-footer-contactus-top li:first-child {
+            margin-left: 0; /* Remove left margin for first item */
+        }
+        #menu-footer-contactus-top li:last-child {
+            margin-right: 0; /* Remove right margin for last item */
+        }
 
         /* Link styling for horizontal lists */
         .social-links.horizontal li a,
